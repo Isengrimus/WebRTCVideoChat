@@ -2,7 +2,7 @@ import io from "socket.io-client";
 import { useState, useRef, useEffect } from "react";
 import Peer from "simple-peer";
 
-const socket = io.connect("http://localhost:8080");
+const socket = io.connect(import.meta.env.VITE_APP_WEBSOCKET_URL);
 
 /**
  * Custom hook for managing WebRTC functionality.
